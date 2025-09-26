@@ -6,9 +6,9 @@ function MakePrediction() {
   return (
     <div>
         <HeaderModeToogle />
-      Make Prediction
+        Make Prediction
 
-      <PagesNavigation activePage="make-prediction" />
+        <PagesNavigation activePage="make-prediction" />
     </div>
   )
 }

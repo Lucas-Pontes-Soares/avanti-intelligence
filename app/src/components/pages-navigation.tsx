@@ -35,7 +35,7 @@ function PagesNavigation({ activePage }: StudentsNavigationProps) {
                 <Link to={`/make-prediction`}>
                     <Brain className="h-6 w-6 sm:h-8 sm:w-8" />
                     <p className={`text-1xl font-bold ${activePage === 'make-prediction' ? 'text-lime-500 ': ''}`}>
-                        Previsão
+                        Fazer Previsão
                     </p>
                 </Link>
               </NavigationMenuLink>
