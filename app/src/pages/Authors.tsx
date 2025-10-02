@@ -15,14 +15,19 @@ function Authors() {
     <div className="pb-20">
       <HeaderModeToogle />
       <div className="min-h-screen container mx-auto px-4 md:px-6 py-12 pt-24">
-        <div className="flex flex-col max-w-4xl mx-auto items-center justify-center gap-8 md:gap-12 mb-12 text-center">
-          <img src="/avanti_intelligence.jpg" alt="Logo da Avanti Intelligence" className="w-48 h-48 rounded-full object-cover shadow-lg" />
-          <div className="space-y-2">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">Avanti Intelligence</h1>
-            <h2 className="text-xl md:text-2xl text-muted-foreground">O Futuro do Diagnóstico: IA na Luta Contra a Pneumonia</h2>
+         <div className="flex flex-col max-w-3xl mx-auto md:flex-row items-center justify-center gap-8 md:gap-12 mb-16 text-center md:text-left">
+            <img
+              src="/AVANTI.svg"
+              alt="Logo da Avanti Intelligence"
+              className="w-52 h-52 rounded-full object-cover shadow-lg bg-white"
+            />
+            <div className="space-y-2">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">Avanti Intelligence</h1>
+              <h2 className="text-xl md:text-2xl text-muted-foreground">
+                <span className="font-semibold">O Futuro do Diagnóstico</span>: <span className="font-semibold">IA na Luta Contra a Pneumonia</span>
+                </h2>
+            </div>
           </div>
-        </div>
-
         <div className="max-w-3xl mx-auto space-y-10 text-center">
           <div className="p-6 rounded-lg shadow-sm border dark:border-slate-800">
             <h3 className="text-2xl font-semibold mb-3">Faculdade</h3>

@@ -15,7 +15,7 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="flex items-center gap-2">
+        <Button variant="outline" className="flex items-center gap-2 dark:bg-zinc-950">
           <span>Trocar Tema</span>
           <div className="relative h-[1.2rem] w-[1.2rem] mt-1">
             <Sun className="h-full w-full scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />

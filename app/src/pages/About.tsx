@@ -8,9 +8,13 @@ function About() {
         <HeaderModeToogle />
         <div className="min-h-screen container mx-auto px-4 md:px-6 py-12 pt-24">
           <div className="flex flex-col max-w-3xl mx-auto md:flex-row items-center justify-center gap-8 md:gap-12 mb-16 text-center md:text-left">
-            <img src="/avanti_intelligence.jpg" alt="Logo da Avanti Intelligence" className="w-48 h-48 rounded-full object-cover shadow-lg" />
+            <img
+              src="/AVANTI.svg"
+              alt="Logo da Avanti Intelligence"
+              className="w-52 h-52 rounded-full object-cover shadow-lg bg-white"
+            />
             <div className="space-y-2">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">Avanti Intelligence</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">Avanti Intelligence</h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground">
                 <span className="font-semibold">O Futuro do Diagnóstico</span>: <span className="font-semibold">IA na Luta Contra a Pneumonia</span>
                 </h2>
