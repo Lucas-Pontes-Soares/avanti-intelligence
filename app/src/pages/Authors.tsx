@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const authors = [
   { name: "Lucas Pontes Soares", fallback: "LS" },
-  { name: "Nycolly Fernanda Trombini Gotardo", fallback: "NG" },
+  { name: "Nikolly Fernanda Trombini Gotardo", fallback: "NG" },
   { name: "Yasmin de Oliveira", fallback: "YO" },
 ]
 
@@ -54,7 +54,7 @@ function Authors() {
             <h3 className="text-2xl font-semibold mb-6">Professor Orientador</h3>
             <div className="flex flex-col items-center gap-3">
               <Avatar className="w-32 h-32">
-                <AvatarImage src="/path/to/bonato.png" alt={teacher.name} />
+                <AvatarImage src={`/${teacher.name}.png`} alt={teacher.name} />
                 <AvatarFallback className="text-3xl">{teacher.fallback}</AvatarFallback>
               </Avatar>
               <p className="text-lg font-medium">{teacher.name}</p>
