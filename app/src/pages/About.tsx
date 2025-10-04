@@ -47,25 +47,16 @@ function About() {
 
             <div className="p-6 rounded-lg shadow-sm border dark:border-slate-800">
               <h3 className="text-2xl font-semibold mb-4">A Tecnologia: Como o Modelo Funciona</h3>
-              <p className="text-lg text-foreground/80 mb-4">Para isso, utilizamos o poder das <strong className="font-semibold text-green-600 dark:text-green-400">Redes Neurais Convolucionais (CNN)</strong>. O projeto envolveu duas abordagens principais:</p>
-              <ol className="list-decimal list-inside space-y-3 text-lg text-foreground/80">
-                <li>Uma <strong className="font-semibold">CNN customizada (Baseline)</strong>, construída para o problema.</li>
-                <li>A técnica de <strong className="font-semibold text-green-600 dark:text-green-400">Transfer Learning</strong> utilizando a arquitetura <strong className="font-semibold text-green-600 dark:text-green-400">MobileNetV2</strong>, aproveitando o conhecimento prévio de uma rede já treinada em milhões de imagens.</li>
-              </ol>
-              <p className="text-lg text-foreground/80 mt-4">O <strong className="font-semibold text-green-600 dark:text-green-400">conjunto de dados real de radiografias</strong> foi a base de conhecimento.</p>
+              <p className="text-lg text-foreground/80 mb-4">Para isso, utilizamos o poder das <strong className="font-semibold text-green-600 dark:text-green-400">Redes Neurais Convolucionais (CNN)</strong> treinado com um conjunto de dados real de radiografias.</p>
             </div>
 
             <div className="p-6 rounded-lg shadow-sm border dark:border-slate-800">
               <h3 className="text-2xl font-semibold mb-4">Nossos Resultados (Desempenho e Avaliação)</h3>
-              <p className="text-lg text-foreground/80 mb-6">Para garantir a confiabilidade, avaliamos rigorosamente o desempenho dos nossos modelos. Os resultados de <strong className="font-semibold text-green-600 dark:text-green-400">Acurácia e Loss</strong> (Perda) de ambas as arquiteturas (CNN Baseline e MobileNetV2) foram registrados.</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <p className="text-lg text-foreground/80 mb-6">Para garantir a confiabilidade, avaliamos rigorosamente o desempenho do nosso modelo. Os resultados de <strong className="font-semibold text-green-600 dark:text-green-400">Acurácia e Loss</strong> (Perda) da arquitetura (CNN Baseline) foram registrados.</p>
+              <div className="flex justify-center">
                 <div className="flex flex-col items-center">
                   <img src="/matriz_confusao_cnn.png" alt="Matriz de Confusão CNN" className="w-full max-w-sm h-auto rounded-lg shadow-md mb-2" />
                   <p className="text-sm text-muted-foreground">Matriz de Confusão - CNN Baseline</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <img src="/matriz_confusao_transfer.png" alt="Matriz de Confusão Transfer Learning" className="w-full max-w-sm h-auto rounded-lg shadow-md mb-2" />
-                  <p className="text-sm text-muted-foreground">Matriz de Confusão - MobileNetV2</p>
                 </div>
               </div>
             </div>

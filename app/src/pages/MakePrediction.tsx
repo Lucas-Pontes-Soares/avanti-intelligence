@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react"
 import HeaderModeToogle from "@/components/header-mode-toogle"
 import PagesNavigation from "@/components/pages-navigation"
 import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+// import { Label } from "@/components/ui/label"
+// import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Camera, ClipboardPlus, FileImage, FolderOpen, Loader2Icon, X } from "lucide-react"
 import { toast } from "sonner"
 import {
@@ -20,7 +20,7 @@ import * as tf from "@tensorflow/tfjs"
 
 function MakePrediction() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
-  const [selectedModel, setSelectedModel] = useState("cnn")
+  //const [selectedModel, setSelectedModel] = useState("cnn")
   const [imagePreview, setImagePreview] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [isResultDialogOpen, setIsResultDialogOpen] = useState(false)
@@ -54,7 +54,7 @@ function MakePrediction() {
 
   const handleReset = () => {
     handleRemoveFile()
-    setSelectedModel("cnn")
+    //setSelectedModel("cnn")
     setIsResultDialogOpen(false)
     setPredictionResult(null)
   }
@@ -65,22 +65,26 @@ function MakePrediction() {
       return
     }
 
+    /*
     if (!selectedModel) {
       toast.error("Por favor, selecione um modelo de IA.")
       return
     }
+    */
 
     setIsLoading(true)
     try {
       toast.info("Fazendo previsão, aguarde...")
 
       // 1. Carregar o modelo
-      let model
+      const model = await tf.loadLayersModel("/models/cnn/model.json")
+      /*
       if (selectedModel === "cnn") {
         model = await tf.loadLayersModel("/models/cnn/model.json")
       } else {
         model = await tf.loadLayersModel("/models/transfer/model.json")
       }
+      */
 
       // 2. Criar elemento HTMLImage para carregar a imagem
       const img = new Image()
@@ -168,7 +172,7 @@ function MakePrediction() {
             <div className="p-6 rounded-lg shadow-sm border dark:border-slate-800 space-y-4">
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">
-                  1. Upload do Raio-X <span className="text-red-400">*</span>
+                  Upload do Raio-X <span className="text-red-400">*</span>
                 </h3>
                 <p className="text-foreground/80">
                   Primeiro, faça o upload da imagem do raio-x do tórax. Escolha uma das opções abaixo:
@@ -224,7 +228,7 @@ function MakePrediction() {
               )}
             </div>
 
-            {/* Escolha do modelo */}
+            {/*
             <div className="p-6 rounded-lg shadow-sm border dark:border-slate-800 space-y-4">
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">
@@ -249,6 +253,7 @@ function MakePrediction() {
                 </div>
               </RadioGroup>
             </div>
+            */}
 
             {/* Botão de previsão */}
             <div className="flex flex-col items-center gap-4">

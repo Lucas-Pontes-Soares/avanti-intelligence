@@ -25,7 +25,7 @@ function PagesNavigation({ activePage }: StudentsNavigationProps) {
                 <Link to={`/about`}>
                     <House className="h-6 w-6 sm:h-8 sm:w-8" />
                     <p className={`text-1xl font-bold ${activePage === 'about' ? 'text-lime-500 ': ''}`}>
-                        Início
+                        Sobre
                     </p>
                 </Link>
               </NavigationMenuLink>
